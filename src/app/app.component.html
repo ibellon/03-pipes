@@ -88,6 +88,31 @@
                     <td>currency:'CAD$ ':'symbol':'.0-0'</td>
                     <td>{{salario | currency:'CAD$ ':'symbol':'.0-0'}}</td>
                 </tr>
+                <tr>
+                    <td>{{valorPromesa}}</td>
+                    <td>async</td>
+                    <td>{{valorPromesa | async}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date</td>
+                    <td>{{fecha | date}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'medium'</td>
+                    <td>{{fecha | date:'medium'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'short'</td>
+                    <td>{{fecha | date:'short'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'dd-MM-yyyy'</td>
+                    <td>{{fecha | date:'dd-MMMM-yyyy'}}</td>
+                </tr>
             </tbody>
 
         </table>
@@ -96,5 +121,15 @@
         <ul>
             <li *ngFor="let item of arreglo | slice:4:20">{{item}}</li>
         </ul>
+
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>
+                    {{heroe | json}}
+                </pre>
+            </div>
+        </div>
     </div>
 </div>

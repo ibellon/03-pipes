@@ -12,5 +12,22 @@ export class AppComponent {
   PI = Math.PI;
   porcentaje = 0.2345;
   salario = 24500.55;
+  fecha = new Date();
+
+  valorPromesa = new Promise<string>((resolve) => {
+    setTimeout(() => {
+      resolve('Llegaron los datos')
+    }, 4500);
+  } );
+
+  heroe = {
+     nombre: 'Logan',
+     clave: 'Wolverine',
+     edad: 500,
+     direccion: {
+       calle: 'Sexta Avenida',
+       numero: 22
+     }
+  };
 
 }
