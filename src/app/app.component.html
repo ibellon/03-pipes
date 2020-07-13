@@ -113,6 +113,26 @@
                     <td>date:'dd-MM-yyyy'</td>
                     <td>{{fecha | date:'dd-MMMM-yyyy'}}</td>
                 </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'dd-MM-yyyy':'':'en'</td>
+                    <td>{{fecha | date:'dd-MMMM-yyyy':'':'en'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'dd-MM-yyyy':'':'fr'</td>
+                    <td>{{fecha | date:'dd-MMMM-yyyy':'':'fr'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'dd-MM-yyyy':'':'{{idioma}}'</td>
+                    <td>
+                        <button (click)="idioma = 'es'" class="mr-0  btn btn-primary">Español</button>
+                        <button (click)="idioma ='en'" class="mr-0 btn btn-secondary">Inglés</button>
+                        <button (click)="idioma = 'fr'" class="mr-0 btn btn-success">Francés</button>
+                    </td>
+                    <td>{{fecha | date:'dd-MMMM-yyyy':'':idioma}}</td>
+                </tr>
             </tbody>
 
         </table>

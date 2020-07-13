@@ -13,6 +13,7 @@ export class AppComponent {
   porcentaje = 0.2345;
   salario = 24500.55;
   fecha = new Date();
+  idioma = 'es';
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {
@@ -29,5 +30,5 @@ export class AppComponent {
        numero: 22
      }
   };
-
+  
 }
