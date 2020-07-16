@@ -143,9 +143,12 @@
         </table>
 
         <h4>Slice</h4>
+        <hr>
         <ul>
             <li *ngFor="let item of arreglo | slice:4:20">{{item}}</li>
         </ul>
+        <div style="height: 1em;">
+        </div>
 
         <h3>JSON</h3>
         <hr>
@@ -155,6 +158,16 @@
                     {{heroe | json}}
                 </pre>
             </div>
+        </div>
+
+        <h3 class="mt-4">DomSeguro</h3>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <iframe width="560" height="315" [src]="videoURL | domSeguro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+            </div>
+
         </div>
     </div>
 </div>

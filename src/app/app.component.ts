@@ -15,6 +15,8 @@ export class AppComponent {
   salario = 24500.55;
   fecha = new Date();
   idioma = 'es';
+  regex = /^(\d{1,13}(?:[\.\,]\d{1,2})?)$/;
+  videoURL = 'https://www.youtube.com/embed/1OPDUhgrI24';
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {
@@ -32,4 +34,13 @@ export class AppComponent {
      }
   };
   
+  ngOnInit(): void {
+    const valor = '0,08';
+    
+    if(this.regex.test(valor)) {
+      console.log('VALIDO');
+    } else {
+      console.log('NO VALE!!!!!');
+    }
+  }
 }
