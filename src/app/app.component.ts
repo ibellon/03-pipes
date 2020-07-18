@@ -17,6 +17,7 @@ export class AppComponent {
   idioma = 'es';
   regex = /^(\d{1,13}(?:[\.\,]\d{1,2})?)$/;
   videoURL = 'https://www.youtube.com/embed/1OPDUhgrI24';
+  activar = true;
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {
